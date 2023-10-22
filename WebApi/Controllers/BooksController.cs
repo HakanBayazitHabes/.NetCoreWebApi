@@ -1,6 +1,6 @@
 ﻿using System.IO.Compression;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using WebApi.Models;
 
 namespace WebApi.Controllers;
 
