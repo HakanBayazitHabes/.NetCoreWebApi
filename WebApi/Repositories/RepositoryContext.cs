@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WebApi.Models;
+using WebApi.Repositories.Config;
 
 namespace WebApi;
 
@@ -10,4 +11,9 @@ public class RepositoryContext : DbContext
     }
 
     public DbSet<Book> Books { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(new BookConfig());
+    }
 }
