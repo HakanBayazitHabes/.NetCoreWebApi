@@ -76,3 +76,5 @@
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Entities.dll
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Entities.pdb
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Repositories.dll
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Repositories.pdb

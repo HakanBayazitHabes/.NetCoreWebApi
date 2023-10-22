@@ -1169,6 +1169,20 @@
         "runtime": {
           "bin/placeholder/Entities.dll": {}
         }
+      },
+      "Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.12"
+        },
+        "compile": {
+          "bin/placeholder/Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositories.dll": {}
+        }
       }
     }
   },
@@ -3346,16 +3360,21 @@
       "type": "project",
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Repositories/Repositories.csproj",
+      "msbuildProject": "../Repositories/Repositories.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Entities >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.11",
-      "Microsoft.EntityFrameworkCore >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.12",
+      "Repositories >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -3386,6 +3405,9 @@
           "projectReferences": {
             "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Entities/Entities.csproj": {
               "projectPath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Entities/Entities.csproj"
+            },
+            "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Repositories/Repositories.csproj": {
+              "projectPath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Repositories/Repositories.csproj"
             }
           }
         }
@@ -3403,10 +3425,6 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.11, )"
-          },
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[7.0.12, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
