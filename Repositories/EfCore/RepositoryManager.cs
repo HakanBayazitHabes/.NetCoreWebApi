@@ -13,7 +13,7 @@ public class RepositoryManager : IRepositoryManager
         _bookRepository = new Lazy<IBookRepository>(() => new BookRepository(_context));
     }
 
-    public IBookRepository Book => new BookRepository(_context);
+    public IBookRepository Book => _bookRepository.Value;
 
     public void Save()
     {

@@ -1183,6 +1183,20 @@
         "runtime": {
           "bin/placeholder/Repositories.dll": {}
         }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Repositories": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
       }
     }
   },
@@ -3365,6 +3379,11 @@
       "type": "project",
       "path": "../Repositories/Repositories.csproj",
       "msbuildProject": "../Repositories/Repositories.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3375,6 +3394,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.12",
       "Repositories >= 1.0.0",
+      "Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -3408,6 +3428,9 @@
             },
             "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Repositories/Repositories.csproj": {
               "projectPath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Repositories/Repositories.csproj"
+            },
+            "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Services/Services.csproj": {
+              "projectPath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Services/Services.csproj"
             }
           }
         }

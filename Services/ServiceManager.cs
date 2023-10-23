@@ -12,5 +12,5 @@ public class ServiceManager : IServiceManager
         _bookService = new Lazy<IBookService>(() => new BookManager(repositoryManager));
     }
 
-    public IBookService BookService => throw new NotImplementedException();
+    public IBookService BookService => _bookService.Value;
 }
