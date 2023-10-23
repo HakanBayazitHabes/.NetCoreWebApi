@@ -3388,12 +3388,10 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Entities >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.12",
-      "Repositories >= 1.0.0",
       "Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
@@ -3423,12 +3421,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Entities/Entities.csproj": {
-              "projectPath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Entities/Entities.csproj"
-            },
-            "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Repositories/Repositories.csproj": {
-              "projectPath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Repositories/Repositories.csproj"
-            },
             "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Services/Services.csproj": {
               "projectPath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Services/Services.csproj"
             }
