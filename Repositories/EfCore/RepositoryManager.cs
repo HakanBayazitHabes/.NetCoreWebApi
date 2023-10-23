@@ -5,9 +5,12 @@ namespace Repositories.EfCore;
 public class RepositoryManager : IRepositoryManager
 {
     private readonly RepositoryContext _context;
-    public RepositoryManager(RepositoryContext context)
+    private readonly Lazy<IBookRepository> _bookRepository;
+
+    public RepositoryManager(RepositoryContext context, Lazy<IBookRepository> bookRepository)
     {
         _context = context;
+        _bookRepository = new Lazy<IBookRepository>(() => new BookRepository(_context));
     }
 
     public IBookRepository Book => new BookRepository(_context);
