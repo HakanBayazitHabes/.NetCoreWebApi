@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uCfvTgs3dBgc415BbGrBNEvXzRF9UENPpOhSb9hTYu+UFaZsKzEDLr54pvnjI6b/S4un0wXiQtz0IiLFLTBh+Q==",
+  "dgSpecHash": "mUibuTL4sua1tdoLhxv+P8a/pli3bjC00zZnTYVRNax7vipWmsz+LiVS20JVaxwMdLGaEt+lbkYJnmurxUuGuw==",
   "success": true,
   "projectFilePath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Presentation/Presentation.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,7 @@
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.12/microsoft.entityframeworkcore.analyzers.7.0.12.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
-    "/Users/hakanbayazithabes/.nuget/packages/microsoft.extensions.configuration.abstractions/2.2.0/microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.extensions.dependencymodel/2.1.0/microsoft.extensions.dependencymodel.2.1.0.nupkg.sha512",
@@ -42,6 +42,8 @@
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.netcore.platforms/1.0.1/microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.netcore.targets/1.0.1/microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/nlog/5.2.5/nlog.5.2.5.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/nlog.extensions.logging/5.3.5/nlog.extensions.logging.5.3.5.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/runtime.native.system/4.0.0/runtime.native.system.4.0.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/system.appcontext/4.1.0/system.appcontext.4.1.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/system.buffers/4.5.0/system.buffers.4.5.0.nupkg.sha512",
