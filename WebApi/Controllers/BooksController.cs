@@ -1,5 +1,7 @@
-﻿using Entities.Models;
+﻿using Azure;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Repositories.Contracts;
 using Repositories.EfCore;
 
 namespace WebApi.Controllers;
@@ -8,11 +10,11 @@ namespace WebApi.Controllers;
 [Route("api/[controller]")]
 public class BooksController : ControllerBase
 {
-    private readonly RepositoryContext _context;
+    private readonly IRepositoryManager _manager;
 
-    public BooksController(RepositoryContext context)
+    public BooksController(IRepositoryManager manager)
     {
-        _context = context;
+        _manager = manager;
     }
 
     [HttpGet]
@@ -20,7 +22,7 @@ public class BooksController : ControllerBase
     {
         try
         {
-            var books = _context.Books.ToList();
+            var books = _manager.Book.GetAllBooks(false);
             return Ok(books);
         }
         catch (Exception e)
@@ -34,7 +36,7 @@ public class BooksController : ControllerBase
     {
         try
         {
-            var book = _context.Books.Where(b => b.Id.Equals(id)).SingleOrDefault();
+            var book = _manager.Book.GetOneBookById(id, false);
             if (book is null)
             {
                 return NotFound();
@@ -56,8 +58,7 @@ public class BooksController : ControllerBase
             {
                 return BadRequest();
             }
-            _context.Books.Add(book);
-            _context.SaveChanges();
+            _manager.Book.CreateOneBook(book);
             return StatusCode(201, book);
         }
         catch (Exception e)
@@ -75,7 +76,7 @@ public class BooksController : ControllerBase
             {
                 return BadRequest();
             }
-            var entity = _context.Books.Where(b => b.Id.Equals(id)).SingleOrDefault();
+            var entity = _manager.Book.GetOneBookById(id, true);
             if (entity is null)
             {
                 return NotFound();
@@ -87,7 +88,7 @@ public class BooksController : ControllerBase
 
             entity.Title = book.Title;
             entity.Price = book.Price;
-            _context.SaveChanges();
+            _manager.Save();
             return Ok(book);
         }
         catch (Exception e)
@@ -101,7 +102,7 @@ public class BooksController : ControllerBase
     {
         try
         {
-            var entity = _context.Books.Where(x => x.Id.Equals(id)).SingleOrDefault();
+            var entity = _manager.Book.GetOneBookById(id, false);
             if (entity is null)
             {
                 return NotFound(new
@@ -110,8 +111,8 @@ public class BooksController : ControllerBase
                     message = $"Book with id:{id} could not found"
                 });
             }
-            _context.Books.Remove(entity);
-            _context.SaveChanges();
+            _manager.Book.DeleteOneBook(entity);
+            _manager.Save();
             return NoContent();
         }
         catch (Exception e)
