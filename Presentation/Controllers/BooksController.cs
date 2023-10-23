@@ -1,14 +1,11 @@
-﻿using Azure;
-using Entities.Models;
+﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using Repositories.Contracts;
-using Repositories.EfCore;
 using Services.Contracts;
 
-namespace WebApi.Controllers;
+namespace Presentation.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/books")]
 public class BooksController : ControllerBase
 {
     private readonly IServiceManager _manager;
@@ -99,3 +96,4 @@ public class BooksController : ControllerBase
         }
     }
 }
+

@@ -80,3 +80,5 @@
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Repositories.pdb
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Services.dll
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Services.pdb
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Presentation.dll
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Presentation.pdb
