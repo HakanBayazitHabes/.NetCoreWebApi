@@ -1,0 +1,32 @@
+2023-10-24 09:34:55.1367 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-10-24 09:34:55.1367 Info Closing old configuration.
+2023-10-24 09:34:55.1553 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/nlog.config
+2023-10-24 09:34:55.1557 Info Configuration initialized.
+2023-10-24 09:35:56.9788 Info AppDomain Shutting down. LogFactory closing...
+2023-10-24 09:35:56.9816 Info LogFactory has been closed.
+2023-10-24 09:36:03.2273 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-10-24 09:36:03.2380 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.5.2160. Product version: 5.2.5+7c014325443d65541200b698a50b9dd4ec30c7f0. GlobalAssemblyCache: False
+2023-10-24 09:36:03.2511 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/nlog.config
+2023-10-24 09:36:03.2558 Info Configuration initialized.
+2023-10-24 09:37:37.2872 Info AppDomain Shutting down. LogFactory closing...
+2023-10-24 09:37:37.2929 Info LogFactory has been closed.
+2023-10-24 09:39:38.0636 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-10-24 09:39:38.0643 Info Closing old configuration.
+2023-10-24 09:39:38.0806 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/nlog.config
+2023-10-24 09:39:38.0806 Info Configuration initialized.
+2023-10-24 09:39:38.6057 Info Configuration file change detected! Reloading in 1000ms...
+2023-10-24 09:39:39.6073 Info Reloading configuration...
+2023-10-24 09:39:39.6073 Info Loading NLog config from XML file: /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/nlog.config
+2023-10-24 09:39:42.3601 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-10-24 09:39:42.3615 Info Closing old configuration.
+2023-10-24 09:39:42.3799 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/nlog.config
+2023-10-24 09:39:42.3802 Info Configuration initialized.
+2023-10-24 09:39:53.8960 Info AppDomain Shutting down. LogFactory closing...
+2023-10-24 09:39:53.8977 Info LogFactory has been closed.
+2023-10-24 09:39:58.9606 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-10-24 09:39:58.9712 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.5.2160. Product version: 5.2.5+7c014325443d65541200b698a50b9dd4ec30c7f0. GlobalAssemblyCache: False
+2023-10-24 09:39:58.9833 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/nlog.config
+2023-10-24 09:39:58.9877 Info Configuration initialized.
+2023-10-24 09:40:58.2474 Info Configuration file change detected! Reloading in 1000ms...
+2023-10-24 09:40:59.2517 Info Reloading configuration...
+2023-10-24 09:40:59.2550 Info Loading NLog config from XML file: /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/nlog.config

@@ -82,3 +82,6 @@
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Services.pdb
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Presentation.dll
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/Presentation.pdb
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/nlog.config
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/NLog.dll
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/NLog.Extensions.Logging.dll
