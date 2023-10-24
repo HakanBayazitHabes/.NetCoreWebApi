@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mUibuTL4sua1tdoLhxv+P8a/pli3bjC00zZnTYVRNax7vipWmsz+LiVS20JVaxwMdLGaEt+lbkYJnmurxUuGuw==",
+  "dgSpecHash": "8LiR4Q0qyVUYHFK60eUzdAR/uM0WDXNNgbObTHEZaWdL7HeTRJioNFMPhSfKaNrKB/FiruV0EXqzVAXGVvx79g==",
   "success": true,
   "projectFilePath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Presentation/Presentation.csproj",
   "expectedPackageFiles": [
+    "/Users/hakanbayazithabes/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.aspnetcore.authentication.core/2.2.0/microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.aspnetcore.authorization/2.2.0/microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
@@ -20,7 +22,7 @@
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.aspnetcore.routing/2.2.0/microsoft.aspnetcore.routing.2.2.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.aspnetcore.routing.abstractions/2.2.0/microsoft.aspnetcore.routing.abstractions.2.2.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.aspnetcore.webutilities/2.2.0/microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
-    "/Users/hakanbayazithabes/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.dotnet.platformabstractions/2.1.0/microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.entityframeworkcore/7.0.12/microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.12/microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",
