@@ -1,7 +1,0 @@
-2023-10-24 09:39:39.6085 Info Registered target NLog.Targets.FileTarget(Name=logfile)
-2023-10-24 09:39:39.6092 Info Closing old configuration.
-2023-10-24 09:39:39.6264 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/nlog.config
-2023-10-24 09:39:39.6264 Info Configuration initialized.
-2023-10-24 09:39:41.3577 Info Configuration file change detected! Reloading in 1000ms...
-2023-10-24 09:39:42.3591 Info Reloading configuration...
-2023-10-24 09:39:42.3601 Info Loading NLog config from XML file: /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/nlog.config
