@@ -38,6 +38,9 @@ public class BooksController : ControllerBase
         if (bookDto is null)
             return BadRequest();
 
+        if (!ModelState.IsValid)
+            return UnprocessableEntity(ModelState);
+
         var book = _manager.BookService.CreateOneBook(bookDto);
         return StatusCode(201, book);
     }
@@ -47,6 +50,9 @@ public class BooksController : ControllerBase
     {
         if (bookDto is null)
             return BadRequest(); //400
+
+        if (!ModelState.IsValid)
+            return UnprocessableEntity(ModelState); //422
 
         _manager.BookService.UpdateOneBook(id, bookDto, true);
 
