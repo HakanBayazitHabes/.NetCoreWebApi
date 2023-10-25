@@ -33,12 +33,12 @@ public class BooksController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult CreateOneBook([FromBody] Book book)
+    public IActionResult CreateOneBook([FromBody] BookDtoForInsertion bookDto)
     {
-        if (book is null)
+        if (bookDto is null)
             return BadRequest();
 
-        _manager.BookService.CreateOneBook(book);
+        var book = _manager.BookService.CreateOneBook(bookDto);
         return StatusCode(201, book);
     }
 
