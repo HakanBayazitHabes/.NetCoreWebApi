@@ -18,22 +18,22 @@ public class BooksController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetAllBooks()
+    public async Task<IActionResult> GetAllBooksAsync()
     {
-        var books = _manager.BookService.GetAllBooks(false);
+        var books =await _manager.BookService.GetAllBooksAsync(false);
         return Ok(books);
     }
 
     [HttpGet("{id}")]
-    public IActionResult GetOneBook([FromRoute(Name = "id")] int id)
+    public async Task<IActionResult> GetOneBookAsync([FromRoute(Name = "id")] int id)
     {
-        var book = _manager.BookService.GetOneBookById(id, false);
+        var book =await _manager.BookService.GetOneBookByIdAsync(id, false);
 
         return Ok(book);
     }
 
     [HttpPost]
-    public IActionResult CreateOneBook([FromBody] BookDtoForInsertion bookDto)
+    public async Task<IActionResult> CreateOneBookAsync([FromBody] BookDtoForInsertion bookDto)
     {
         if (bookDto is null)
             return BadRequest();
@@ -41,12 +41,12 @@ public class BooksController : ControllerBase
         if (!ModelState.IsValid)
             return UnprocessableEntity(ModelState);
 
-        var book = _manager.BookService.CreateOneBook(bookDto);
+        var book = await _manager.BookService.CreateOneBookAsync(bookDto);
         return StatusCode(201, book);
     }
 
     [HttpPut("{id}")]
-    public IActionResult UpdateOneBook([FromRoute(Name = "id")] int id, [FromBody] BookDtoForUpdate bookDto)
+    public async Task<IActionResult> UpdateOneBookAsync([FromRoute(Name = "id")] int id, [FromBody] BookDtoForUpdate bookDto)
     {
         if (bookDto is null)
             return BadRequest(); //400
@@ -54,16 +54,16 @@ public class BooksController : ControllerBase
         if (!ModelState.IsValid)
             return UnprocessableEntity(ModelState); //422
 
-        _manager.BookService.UpdateOneBook(id, bookDto, true);
+        await _manager.BookService.UpdateOneBookAsync(id, bookDto, true);
 
         return NoContent(); //204
 
     }
 
     [HttpDelete("{id}")]
-    public IActionResult DeleteOneBook([FromRoute(Name = "id")] int id)
+    public async Task<IActionResult> DeleteOneBookAsync([FromRoute(Name = "id")] int id)
     {
-        _manager.BookService.DeleteOneBook(id, false);
+        await _manager.BookService.DeleteOneBookAsync(id, false);
         return NoContent();
     }
 }

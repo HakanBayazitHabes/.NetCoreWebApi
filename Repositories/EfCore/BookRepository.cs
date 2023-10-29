@@ -1,4 +1,5 @@
 ﻿using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
 
 namespace Repositories.EfCore;
@@ -13,11 +14,11 @@ public class BookRepository : RepositoryBase<Book>, IBookRepository
 
     public void DeleteOneBook(Book book) => Delete(book);
 
-    public IQueryable<Book> GetAllBooks(bool trackChanges) => FindAll(trackChanges).OrderBy(b => b.Id);
+    public async Task<IEnumerable<Book>> GetAllBooksAsync(bool trackChanges) => await FindAll(trackChanges).OrderBy(b => b.Id).ToListAsync();
 
-    public Book GetOneBookById(int id, bool trackChanges) => FindByCondition(
+    public async Task<Book> GetOneBookByIdAsync(int id, bool trackChanges) =>await FindByCondition(
         b => b.Id.Equals(id),
-        trackChanges).SingleOrDefault();
+        trackChanges).SingleOrDefaultAsync();
 
     public void UpdateOneBook(Book book) => Update(book);
 }
