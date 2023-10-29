@@ -2,6 +2,7 @@
 using Entities.Exceptions;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Presentation.ActionFilters;
 using Services.Contracts;
 
 namespace Presentation.Controllers;
@@ -20,40 +21,30 @@ public class BooksController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAllBooksAsync()
     {
-        var books =await _manager.BookService.GetAllBooksAsync(false);
+        var books = await _manager.BookService.GetAllBooksAsync(false);
         return Ok(books);
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetOneBookAsync([FromRoute(Name = "id")] int id)
     {
-        var book =await _manager.BookService.GetOneBookByIdAsync(id, false);
+        var book = await _manager.BookService.GetOneBookByIdAsync(id, false);
 
         return Ok(book);
     }
 
+    [ServiceFilter(typeof(ValidationFilterAttribute))]
     [HttpPost]
     public async Task<IActionResult> CreateOneBookAsync([FromBody] BookDtoForInsertion bookDto)
     {
-        if (bookDto is null)
-            return BadRequest();
-
-        if (!ModelState.IsValid)
-            return UnprocessableEntity(ModelState);
-
         var book = await _manager.BookService.CreateOneBookAsync(bookDto);
         return StatusCode(201, book);
     }
 
+    [ServiceFilter(typeof(ValidationFilterAttribute))]
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateOneBookAsync([FromRoute(Name = "id")] int id, [FromBody] BookDtoForUpdate bookDto)
     {
-        if (bookDto is null)
-            return BadRequest(); //400
-
-        if (!ModelState.IsValid)
-            return UnprocessableEntity(ModelState); //422
-
         await _manager.BookService.UpdateOneBookAsync(id, bookDto, true);
 
         return NoContent(); //204

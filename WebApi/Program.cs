@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using NLog;
+using Presentation.ActionFilters;
 using Services.Contracts;
 using WebApi.Extensions;
 
@@ -17,9 +18,12 @@ builder.Services.AddControllers(config =>
     .AddCustomCsvFormatter()
     .AddXmlDataContractSerializerFormatters()
     .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
+builder.Services.AddScoped<ValidationFilterAttribute>();
 
-builder.Services.Configure<ApiBehaviorOptions>(options =>{
-        options.SuppressModelStateInvalidFilter = true;
+
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.SuppressModelStateInvalidFilter = true;
 });
 
 
