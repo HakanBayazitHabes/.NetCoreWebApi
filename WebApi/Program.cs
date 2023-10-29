@@ -18,7 +18,6 @@ builder.Services.AddControllers(config =>
     .AddCustomCsvFormatter()
     .AddXmlDataContractSerializerFormatters()
     .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
-builder.Services.AddScoped<ValidationFilterAttribute>();
 
 
 builder.Services.Configure<ApiBehaviorOptions>(options =>
@@ -35,6 +34,7 @@ builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureLoggerService();
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.ConfigureActionFilters();
 
 
 var app = builder.Build();
