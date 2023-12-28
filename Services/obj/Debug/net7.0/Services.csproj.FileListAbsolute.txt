@@ -15,3 +15,4 @@
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Services/obj/Debug/net7.0/refint/Services.dll
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Services/obj/Debug/net7.0/Services.pdb
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Services/obj/Debug/net7.0/ref/Services.dll
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Services/obj/Debug/net7.0/Services.sourcelink.json

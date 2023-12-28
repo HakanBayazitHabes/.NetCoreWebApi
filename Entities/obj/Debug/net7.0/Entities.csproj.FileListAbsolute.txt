@@ -9,3 +9,4 @@
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Entities/obj/Debug/net7.0/refint/Entities.dll
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Entities/obj/Debug/net7.0/Entities.pdb
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Entities/obj/Debug/net7.0/ref/Entities.dll
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Entities/obj/Debug/net7.0/Entities.sourcelink.json

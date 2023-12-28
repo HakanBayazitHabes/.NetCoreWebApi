@@ -87,3 +87,4 @@
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/NLog.Extensions.Logging.dll
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/AutoMapper.dll
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/obj/Debug/net7.0/WebApi.sourcelink.json

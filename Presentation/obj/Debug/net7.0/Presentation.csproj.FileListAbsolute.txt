@@ -17,3 +17,4 @@
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Presentation/obj/Debug/net7.0/refint/Presentation.dll
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Presentation/obj/Debug/net7.0/Presentation.pdb
 /Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Presentation/obj/Debug/net7.0/ref/Presentation.dll
+/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Presentation/obj/Debug/net7.0/Presentation.sourcelink.json
