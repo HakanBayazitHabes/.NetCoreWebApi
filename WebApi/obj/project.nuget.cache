@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pUy9uY3WwggVsihUEKHsorohTONg5A9/f0PawstL23Fsh/uBlFCz4WXbBlwt8a8DjDqmjuTU1PGhzPd7PAFTLA==",
+  "dgSpecHash": "zHj235taQlFtu+gdOsZ99xUa36jWjh0qkpnCQhQvxI2LinjfQQ9NYPyiMIBnUmkB+My4BAsHBBdhKc8mPO9zog==",
   "success": true,
   "projectFilePath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/WebApi/WebApi.csproj",
   "expectedPackageFiles": [
@@ -95,7 +95,10 @@
     "/Users/hakanbayazithabes/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "/Users/hakanbayazithabes/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
+    "/Users/hakanbayazithabes/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.14/microsoft.netcore.app.host.osx-arm64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

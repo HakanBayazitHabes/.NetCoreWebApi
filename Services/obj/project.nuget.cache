@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vOulWexG4Cdj1Dv1mAPnViuxGPhy8fFoj5IvmwV/hyFbSDuCryHAKTzetrEZQ/qYtN2Nv5DnD6zUqTbiVmItHw==",
+  "dgSpecHash": "j64/QGPrFY5chIZ5/uCgMMj5KSsfA1k9LETGqmx7xkcgSxRb439wIG3/Ej+9PYrT1VnuzhBHVoPxXmOLm5ZAcw==",
   "success": true,
   "projectFilePath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Services/Services.csproj",
   "expectedPackageFiles": [
@@ -20,7 +20,9 @@
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/nlog/5.2.5/nlog.5.2.5.nupkg.sha512",
-    "/Users/hakanbayazithabes/.nuget/packages/nlog.extensions.logging/5.3.5/nlog.extensions.logging.5.3.5.nupkg.sha512"
+    "/Users/hakanbayazithabes/.nuget/packages/nlog.extensions.logging/5.3.5/nlog.extensions.logging.5.3.5.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

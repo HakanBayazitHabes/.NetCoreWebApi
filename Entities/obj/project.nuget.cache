@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "QtvfANyb/J3pMCySUs6EPkEc0ha/+oln73CZn8nYL71v99ikEn8vc5sNuGyb2Lx/SAmt8kdixWJTNOAa18nw0A==",
+  "dgSpecHash": "/xbIIgVi6VkrRoYViLc1KBIGCguM/Lpbe3mDVhZBawkk+rchNwmNE4b2Eea5tOLJ2m9j2N70KH16uv95PQ9w9Q==",
   "success": true,
   "projectFilePath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Entities/Entities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

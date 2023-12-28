@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8LiR4Q0qyVUYHFK60eUzdAR/uM0WDXNNgbObTHEZaWdL7HeTRJioNFMPhSfKaNrKB/FiruV0EXqzVAXGVvx79g==",
+  "dgSpecHash": "s00+Qo9o4UsixRb9mWMcwvRLm0PsICK+l1vxdQKCzsO8tevPJ8zCimycdm0KflL9jXnDKFsZ6cPC8rbpbLVXOA==",
   "success": true,
   "projectFilePath": "/Users/hakanbayazithabes/Desktop/Software/Asp.Net Core/bsStoreApp/Presentation/Presentation.csproj",
   "expectedPackageFiles": [
@@ -83,7 +83,9 @@
     "/Users/hakanbayazithabes/.nuget/packages/system.threading.tasks/4.0.11/system.threading.tasks.4.0.11.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/system.threading.tasks.extensions/4.5.1/system.threading.tasks.extensions.4.5.1.nupkg.sha512",
     "/Users/hakanbayazithabes/.nuget/packages/system.xml.readerwriter/4.0.11/system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "/Users/hakanbayazithabes/.nuget/packages/system.xml.xdocument/4.0.11/system.xml.xdocument.4.0.11.nupkg.sha512"
+    "/Users/hakanbayazithabes/.nuget/packages/system.xml.xdocument/4.0.11/system.xml.xdocument.4.0.11.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/hakanbayazithabes/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }
