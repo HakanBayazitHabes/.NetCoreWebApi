@@ -18,3 +18,9 @@
 *.sbr
 obj/
 [Rr]elease*/
+
+WebApi/obj
+Repositories/obj
+Services/obj
+Presentation/obj
+Entities/obj

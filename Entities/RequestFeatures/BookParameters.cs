@@ -8,7 +8,7 @@ public class BookParameters : RequestParamaters
 
     public String? SearchTerm { get; set; }
 
-    BookParameters()
+    public BookParameters()
     {
         OrderBy = "id";
     }
