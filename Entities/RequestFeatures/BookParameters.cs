@@ -7,4 +7,9 @@ public class BookParameters : RequestParamaters
     public bool validPriceRange => MaxPrice > MinPrice;
 
     public String? SearchTerm { get; set; }
+
+    BookParameters()
+    {
+        OrderBy = "id";
+    }
 }
