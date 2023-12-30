@@ -21,3 +21,4 @@ obj/
 
 **/bin/
 **/obj/
+WebApi/internal_logs/internallog.txt
