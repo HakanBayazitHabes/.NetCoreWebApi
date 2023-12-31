@@ -27,6 +27,7 @@ public static class ServicesExtensions
     {
         services.AddScoped<ValidationFilterAttribute>(); //IoC
         services.AddSingleton<LogFilterAttribute>(); //IoC
+        services.AddScoped<ValidateMediaTypeAttribute>();
     }
 
     public static void ConfigureCors(this IServiceCollection services)
