@@ -1,6 +1,6 @@
-using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Net.Http.Headers;
 
 namespace Presentation.ActionFilters;
 
@@ -16,14 +16,15 @@ public class ValidateMediaTypeAttribute : ActionFilterAttribute
         if (!acceptHeaderPresent)
         {
             context.Result = new BadRequestObjectResult($"Accept header is missin!");
+            return;
         }
 
         var mediaType = context.HttpContext
-        .Response
+        .Request
         .Headers["Accept"]
         .FirstOrDefault();
 
-        if (MediaTypeHeaderValue.TryParse(mediaType, out MediaTypeHeaderValue? outMediaType))
+        if (!MediaTypeHeaderValue.TryParse(mediaType, out MediaTypeHeaderValue? outMediaType))
         {
             context.Result = new BadRequestObjectResult($"Media type not present. " + $"Please add accept header with required media type.");
             return;

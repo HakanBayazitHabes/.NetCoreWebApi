@@ -61,7 +61,7 @@ public class BookLinks : IBookLinks
 
     private bool ShouldGenerateLinks(HttpContext httpContext)
     {
-        var mediaType = (MediaTypeHeaderValue)httpContext.Items["AcceptHeaderMdiaType"];
+        var mediaType = (MediaTypeHeaderValue)httpContext.Items["AcceptHeaderMediaType"];
         return mediaType
         .SubTypeWithoutSuffix
         .EndsWith("hateoas", StringComparison.InvariantCultureIgnoreCase);

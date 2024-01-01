@@ -52,9 +52,9 @@ public static class ServicesExtensions
     {
         services.Configure<MvcOptions>(config =>
         {
-            var systemTextJsonOutputFormatter = config.OutputFormatters.OfType<SystemTextJsonInputFormatter>()?.FirstOrDefault();
+            var systemTextJsonOutputFormatter = config.OutputFormatters.OfType<SystemTextJsonOutputFormatter>()?.FirstOrDefault();
 
-            if (systemTextJsonOutputFormatter is not null)
+            if (systemTextJsonOutputFormatter != null)
             {
                 systemTextJsonOutputFormatter.SupportedMediaTypes.Add("application/vnd.btkakademi.hateoas+json");
             }
