@@ -20,8 +20,8 @@ public class BooksController : ControllerBase
     {
         _manager = manager;
     }
-
-    [HttpGet]
+    [HttpHead]
+    [HttpGet(Name = "GetAllBooksAsync")]
     [ServiceFilter(typeof(ValidateMediaTypeAttribute))]
     public async Task<IActionResult> GetAllBooksAsync([FromQuery] BookParameters bookParameters)
     {
