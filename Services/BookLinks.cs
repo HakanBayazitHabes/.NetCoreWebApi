@@ -42,7 +42,19 @@ public class BookLinks : IBookLinks
         }
 
         var bookCollection = new LinkCollectionWrapper<Entity>(shapedBooks);
+        CreateForBooks(httpContext, bookCollection);
         return new LinkResponse { HasLinks = true, LinkedEntities = bookCollection };
+    }
+
+    private LinkCollectionWrapper<Entity> CreateForBooks(HttpContext httpContext, LinkCollectionWrapper<Entity> bookCollectionWrapper)
+    {
+        bookCollectionWrapper.Links.Add(new Link()
+        {
+            Href = $"/api/{httpContext.GetRouteData().Values["controller"].ToString().ToLower()}",
+            Rel = "self",
+            Method = "GET"
+        });
+        return bookCollectionWrapper;
     }
 
     private List<Link> CreateForBook(HttpContext httpContext, BookDto bookDto, string fields)
