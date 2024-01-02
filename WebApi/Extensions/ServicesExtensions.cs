@@ -57,6 +57,8 @@ public static class ServicesExtensions
             if (systemTextJsonOutputFormatter != null)
             {
                 systemTextJsonOutputFormatter.SupportedMediaTypes.Add("application/vnd.btkakademi.hateoas+json");
+
+                systemTextJsonOutputFormatter.SupportedMediaTypes.Add("application/vnd.btkakademi.apiroot+json");
             }
 
             var xmlOutputFormatter = config.OutputFormatters.OfType<XmlDataContractSerializerOutputFormatter>()?.FirstOrDefault();
@@ -64,6 +66,7 @@ public static class ServicesExtensions
             if (xmlOutputFormatter is not null)
             {
                 xmlOutputFormatter.SupportedMediaTypes.Add("application/vnd.btkakademi.hateoas+xml");
+                xmlOutputFormatter.SupportedMediaTypes.Add("application/vnd.btkakademi.apiroot+xml");
             }
         });
     }
