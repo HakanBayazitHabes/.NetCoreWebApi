@@ -43,6 +43,7 @@ builder.Services.AddCustomMediaTypes();
 builder.Services.AddScoped<IBookLinks, BookLinks>();
 builder.Services.ConfigureVersioning();
 builder.Services.ConfigureResponseCaching();
+builder.Services.ConfigureHttpCacheHeaders();
 
 
 var app = builder.Build();
@@ -67,6 +68,7 @@ app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");
 // Microsoft Cors'dan sonra Caching kullanılması öneriyor
 app.UseResponseCaching();
+app.UseHttpCacheHeaders();
 
 app.UseAuthorization();
 
