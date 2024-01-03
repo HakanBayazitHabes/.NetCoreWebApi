@@ -12,4 +12,5 @@ public interface IBookService
     Task<BookDto> CreateOneBookAsync(BookDtoForInsertion bookDto);
     Task UpdateOneBookAsync(int id, BookDtoForUpdate bookDto, bool trackChanges);
     Task DeleteOneBookAsync(int id, bool trackChanges);
+    Task<List<Book>> GetAllBooksAsync(bool trackChanges);
 }
