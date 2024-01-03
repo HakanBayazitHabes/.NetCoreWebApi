@@ -24,6 +24,7 @@ public class BooksController : ControllerBase
     [HttpHead]
     [HttpGet(Name = "GetAllBooksAsync")]
     [ServiceFilter(typeof(ValidateMediaTypeAttribute))]
+    [ResponseCache(Duration = 60)]
     public async Task<IActionResult> GetAllBooksAsync([FromQuery] BookParameters bookParameters)
     {
         var linkParameters = new LinkParameters()
@@ -41,7 +42,7 @@ public class BooksController : ControllerBase
         Ok(result.linkResponse.ShapedEntities);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     public async Task<IActionResult> GetOneBookAsync([FromRoute(Name = "id")] int id)
     {
         var book = await _manager.BookService.GetOneBookByIdAsync(id, false);
@@ -50,7 +51,7 @@ public class BooksController : ControllerBase
     }
 
     [ServiceFilter(typeof(ValidationFilterAttribute))]
-    [HttpPost(Name ="CreateOneBookAsync")]
+    [HttpPost(Name = "CreateOneBookAsync")]
     public async Task<IActionResult> CreateOneBookAsync([FromBody] BookDtoForInsertion bookDto)
     {
         var book = await _manager.BookService.CreateOneBookAsync(bookDto);
