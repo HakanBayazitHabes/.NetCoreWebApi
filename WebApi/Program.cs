@@ -49,6 +49,9 @@ builder.Services.AddMemoryCache();
 builder.Services.ConfigureRateLimitingOptions();
 builder.Services.AddHttpContextAccessor();
 
+builder.Services.AddAuthentication(); //Kullanıcı adı şifre middleware'inı aktifleştirir
+builder.Services.ConfigureIdentity();
+
 
 var app = builder.Build();
 
@@ -75,6 +78,7 @@ app.UseCors("CorsPolicy");
 app.UseResponseCaching();
 app.UseHttpCacheHeaders();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

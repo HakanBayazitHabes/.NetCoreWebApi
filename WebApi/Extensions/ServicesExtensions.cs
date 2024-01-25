@@ -1,7 +1,9 @@
 ﻿using System.Collections.Immutable;
 using AspNetCoreRateLimit;
 using Entities.DataTransferObjects;
+using Entities.Models;
 using Marvin.Cache.Headers;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.Versioning;
@@ -131,6 +133,20 @@ public static class ServicesExtensions
         services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
         services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
         services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
+    }
+
+    public static void ConfigureIdentity(this IServiceCollection services)
+    {
+        var builder = services.AddIdentity<User, IdentityRole>(q =>
+        {
+            q.User.RequireUniqueEmail = true;
+            q.Password.RequireLowercase = false;
+            q.Password.RequireUppercase = false;
+            q.Password.RequireNonAlphanumeric = false;
+            q.Password.RequiredLength = 6;
+        })
+        .AddEntityFrameworkStores<RepositoryContext>()
+        .AddDefaultTokenProviders();
     }
 
 }
