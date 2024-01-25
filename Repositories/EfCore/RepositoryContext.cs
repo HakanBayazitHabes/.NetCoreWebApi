@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using System.Reflection;
+using Entities.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Repositories.EfCore.Config;
@@ -16,6 +17,8 @@ public class RepositoryContext : IdentityDbContext<User>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder); //Kimlik çerçevesi için gereken şemayı yapılandırır.
-        modelBuilder.ApplyConfiguration(new BookConfig());
+        //modelBuilder.ApplyConfiguration(new BookConfig());
+        //modelBuilder.ApplyConfiguration(new RoleConfiguration());
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly()); // IEntityTypeConfiguration ifadesini kullanılanları doğrudan burada toplamış olucaz 
     }
 }
