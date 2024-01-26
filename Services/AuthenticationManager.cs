@@ -11,7 +11,7 @@ public class AuthenticationManager : IAuthenticationService
 {
     private readonly ILoggerService _logger;
     private readonly IMapper _mapper;
-    private readonly UserManager<User> _userManager; 
+    private readonly UserManager<User> _userManager;
     private readonly IConfiguration _configuration;
 
     public AuthenticationManager(ILoggerService logger, IMapper mapper, UserManager<User> userManager, IConfiguration configuration)
@@ -24,6 +24,14 @@ public class AuthenticationManager : IAuthenticationService
 
     public async Task<IdentityResult> RegisterUser(UserForRegistrationDto userForRegistrationDto)
     {
-        throw new NotImplementedException();
+        var user = _mapper.Map<User>(userForRegistrationDto);
+
+        var result = await _userManager
+            .CreateAsync(user, userForRegistrationDto.Password);
+
+        if (result.Succeeded)
+            await _userManager.AddToRolesAsync(user, userForRegistrationDto.Roles);
+
+        return result;
     }
 }
