@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 using AutoMapper;
 using Entities.DataTransferObjects;
+using Entities.Exceptions;
 using Entities.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -150,5 +151,17 @@ public class AuthenticationManager : IAuthenticationService
             throw new SecurityTokenException("Invalid token");
 
         return principal;
+    }
+
+    public async Task<TokenDto> RefreshToken(TokenDto token)
+    {
+        var principal = GetPrincipalFromExpiredToken(token.AccessToken);
+        var user = await _userManager.FindByNameAsync(principal.Identity.Name);
+
+        if (user is null || user.RefreshToken != token.RefreshToken || user.RefreshTokenExpiryTime <= DateTime.Now)
+            throw new RefreshTokenBadRequestException();
+
+        _user = user;
+        return await CreateToken(false);
     }
 }

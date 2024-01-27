@@ -48,4 +48,13 @@ public class AuthenticationController : ControllerBase
         return Ok(tokenDto);
     }
 
+    [HttpPost("refresh")]
+    [ServiceFilter(typeof(ValidationFilterAttribute))]//Gelen Dtonun boş olup olmadığını sorguluyor(400 dönüyor).
+    public async Task<IActionResult> Refresh([FromBody] TokenDto tokenDto)
+    {
+        var tokenDtoToReturn = await _service.AuthenticationService.RefreshToken(tokenDto);
+
+        return Ok(tokenDtoToReturn);
+    } 
+
 }
