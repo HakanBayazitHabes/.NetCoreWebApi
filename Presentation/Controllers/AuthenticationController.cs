@@ -33,4 +33,19 @@ public class AuthenticationController : ControllerBase
 
         return StatusCode(201);
     }
+
+    [HttpPost("login")]
+    [ServiceFilter(typeof(ValidationFilterAttribute))]//Gelen Dtonun boş olup olmadığını sorguluyor(400 dönüyor).
+    public async Task<IActionResult> Authenticate([FromBody] UserForAuthenticationDto userForAuthenticationDto)
+    {
+        var isUserValid = await _service.AuthenticationService.ValidateUser(userForAuthenticationDto);
+
+        if (!isUserValid)
+            return Unauthorized();
+
+        var token = await _service.AuthenticationService.CreateToken();
+
+        return Ok(new { Token = token });
+    }
+
 }
