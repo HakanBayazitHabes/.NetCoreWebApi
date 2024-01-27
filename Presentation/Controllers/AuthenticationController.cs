@@ -41,11 +41,11 @@ public class AuthenticationController : ControllerBase
         var isUserValid = await _service.AuthenticationService.ValidateUser(userForAuthenticationDto);
 
         if (!isUserValid)
-            return Unauthorized();
+            return Unauthorized(); // 401
 
-        var token = await _service.AuthenticationService.CreateToken();
+        var tokenDto = await _service.AuthenticationService.CreateToken(true);
 
-        return Ok(new { Token = token });
+        return Ok(tokenDto);
     }
 
 }
