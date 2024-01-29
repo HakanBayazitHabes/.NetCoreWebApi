@@ -180,9 +180,44 @@ public static class ServicesExtensions
 
     public static void ConfigureSwagger(this IServiceCollection services)
     {
-        services.AddSwaggerGen(s =>{
-            s.SwaggerDoc("v1", new OpenApiInfo {Title = "BTK Akademi", Version="v1"});
-            s.SwaggerDoc("v2", new OpenApiInfo {Title = "BTK Akademi", Version="v2"});
+        services.AddSwaggerGen(s =>
+        {
+            s.SwaggerDoc("v1", new OpenApiInfo
+            {
+                Title = "BTK Akademi",
+                Version = "v1",
+                Description = "BTK Akademi Web API",
+                TermsOfService = new Uri("https://www.btkakademi.gov.tr/"),
+                Contact = new OpenApiContact
+                {
+                    Name = "Hakan Bayazıt Habeş",
+                    Email = "hakanbayazithabes@gmail.com",
+                    Url = new Uri("https://www.linkedin.com/in/hakan-bayaz%C4%B1thabe%C5%9F/")
+                }
+            });
+            s.SwaggerDoc("v2", new OpenApiInfo { Title = "BTK Akademi", Version = "v2" });
+
+            s.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+            {
+                In = ParameterLocation.Header,
+                Description = "Please enter into the field the word 'Bearer' following by space and JWT token.",
+                Name = "Authorization",
+                Type = SecuritySchemeType.ApiKey,
+                Scheme = "Bearer"
+            });
+
+            s.AddSecurityRequirement(new OpenApiSecurityRequirement(){
+                {
+                    new OpenApiSecurityScheme{
+                        Reference = new OpenApiReference{
+                            Id = "Bearer",
+                            Type = ReferenceType.SecurityScheme
+                        },
+                        Name="Bearer"
+                    }, new List<string>()
+                }
+            });
+
         });
     }
 
