@@ -1,3 +1,4 @@
+using Entities.Exceptions;
 using Entities.Models;
 using Repositories.Contracts;
 using Services.Contracts;
@@ -20,6 +21,11 @@ public class CategoryManager : ICategoryService
 
     public async Task<Category> GetOneCategoryByIdAsync(int id, bool trackChanges)
     {
-        return await _manager.Category.GetOneCategoryByIdAsync(id, trackChanges);
+        var category = await _manager.Category.GetOneCategoryByIdAsync(id, trackChanges);
+
+        if (category is null)
+            throw new CategoryNotFoundException(id);
+
+        return category;
     }
 }
