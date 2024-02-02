@@ -58,6 +58,13 @@ public class BooksController : ControllerBase
         return Ok(book);
     }
 
+    [Authorize]
+    [HttpGet("details")]
+    public async Task<IActionResult> GetAllBooksWithDetailAsync(){
+        var books = await _manager.BookService.GetAllBooksWithDetailsAsync(false);
+        return Ok(books);
+    }
+
     [Authorize(Roles = "Editor, Admin")]
     [ServiceFilter(typeof(ValidationFilterAttribute))]
     [HttpPost(Name = "CreateOneBookAsync")]
