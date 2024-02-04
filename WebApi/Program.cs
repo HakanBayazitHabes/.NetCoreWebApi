@@ -16,12 +16,13 @@ builder.Services.AddControllers(config =>
 {
     config.RespectBrowserAcceptHeader = true;
     config.ReturnHttpNotAcceptable = true;
-    config.CacheProfiles.Add("5mins", new CacheProfile() { Duration = 300 }); 
+    config.CacheProfiles.Add("5mins", new CacheProfile() { Duration = 300 });
 })
     .AddXmlDataContractSerializerFormatters()
     .AddCustomCsvFormatter()
     .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly)
-    .AddJsonOptions(options =>{
+    .AddJsonOptions(options =>
+    {
         //ReferenceHandler.IgnoreCycles ayarı, bu tür döngüsel referansları görmezden gelerek ve döngüsel referansın bir parçası olan nesneleri serileştirmeyi durdurarak bu sorunu çözer. Bu, aynı nesnenin birden fazla kez serileştirilmesini önler ve döngüsel referansların oluşturabileceği sonsuz döngüleri engeller.
         options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
     });
@@ -54,6 +55,8 @@ builder.Services.ConfigureRateLimitingOptions();
 builder.Services.AddHttpContextAccessor();
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureJWT(builder.Configuration);
+builder.Services.RegisterRepositories();
+builder.Services.RegisterServices();
 
 
 
