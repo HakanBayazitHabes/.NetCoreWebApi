@@ -1,3 +1,4 @@
+
 namespace Entities.Models;
 
 public class Category
@@ -6,5 +7,5 @@ public class Category
     public String? CategoryName { get; set; }
 
     // Ref: Collection navigation property
-    public ICollection<Book> Books { get; set; }
+    // public ICollection<Book> Books { get; set; }
 }

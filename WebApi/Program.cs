@@ -1,7 +1,7 @@
+using System.Text.Json.Serialization;
 using AspNetCoreRateLimit;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
-using Presentation.ActionFilters;
 using Services;
 using Services.Contracts;
 using WebApi.Extensions;
@@ -16,11 +16,15 @@ builder.Services.AddControllers(config =>
 {
     config.RespectBrowserAcceptHeader = true;
     config.ReturnHttpNotAcceptable = true;
-    config.CacheProfiles.Add("5mins", new CacheProfile() { Duration = 300 });
+    config.CacheProfiles.Add("5mins", new CacheProfile() { Duration = 300 }); 
 })
     .AddXmlDataContractSerializerFormatters()
     .AddCustomCsvFormatter()
-    .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
+    .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly)
+    .AddJsonOptions(options =>{
+        //ReferenceHandler.IgnoreCycles ayarı, bu tür döngüsel referansları görmezden gelerek ve döngüsel referansın bir parçası olan nesneleri serileştirmeyi durdurarak bu sorunu çözer. Bu, aynı nesnenin birden fazla kez serileştirilmesini önler ve döngüsel referansların oluşturabileceği sonsuz döngüleri engeller.
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    });
 
 
 builder.Services.Configure<ApiBehaviorOptions>(options =>
