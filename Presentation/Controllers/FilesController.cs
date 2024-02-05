@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.StaticFiles;
 
 namespace Presentation.Controllers;
 
@@ -32,4 +33,22 @@ public class FilesController : ControllerBase
             size = file.Length
         });
     }
+
+    [HttpGet("download")]
+    public async Task<IActionResult> Download(string fileName)
+    {
+        // filePath
+        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Media", fileName);
+
+        // ContentType : (MINE)
+        var provider = new FileExtensionContentTypeProvider();
+        if (!provider.TryGetContentType(filePath, out var contentType))
+            contentType = "application/octet-stream";
+
+        // read
+        var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
+        return File(bytes, contentType, Path.GetFileName(filePath));
+    }
+
+
 }
